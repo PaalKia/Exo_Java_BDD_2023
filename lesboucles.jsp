@@ -31,7 +31,7 @@
         <p>
          <% int row = 1; %>
     <% while (row <= cpt) { %>
-        <% for (int i = row; i <= cpt; i++) { %>
+        <% for (int i = 1; i <= cpt; i++) { %>
             <%= "*" %>
         <% } %><br>
         <% row++; %>
