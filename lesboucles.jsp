@@ -42,7 +42,7 @@ for (int i = 1; i <= cpt; i++) {
         <h2>Exercice 2 : Triangle rectangle gauche</h2>
         <p>Ecrire le code afin de produire un triangle rectangle aligné sur la gauche</p>
         <p>
-            <% int row = 1; %>
+            <% row = 1; %>
     <% while (row <= cpt) { %>
         <% int col = 1; %>
         <% while (col <= row) { %>
@@ -56,7 +56,7 @@ for (int i = 1; i <= cpt; i++) {
         <h2>Exercice 3 : Triangle rectangle inversé</h2>
         <p>Ecrire le code afin de produire un triangle rectangle aligné sur la gauche</p>
         <p>
-           <% int row = cpt; %>
+           <% row = cpt; %>
     <% while (row >= 1) { %>
         <% int col = 1; %>
         <% while (col <= row) { %>
@@ -70,61 +70,57 @@ for (int i = 1; i <= cpt; i++) {
         <h2>Exercice 4 : Triangle rectangle 2</h2>
         <p>Ecrire le code afin de produire un triangle rectangle aligné sur la droite</p>
         <p>
-            <%
-for (int i = 1; i <= cpt; i++) {
-    for (int j = 1; j <= cpt - i; j++) {
-        out.print("&nbsp;");
-    }
-    for (int k = 1; k <= i; k++) {
-        out.print("*");
-    }
-    out.println("<br>");
-}
-%>
+            <% row = cpt; %>
+    <% while (row >= 1) { %>
+        <% int col = 1; %>
+        <% while (col <= row) { %>
+            <%= "*" %>
+            <% col++; %>
+        <% } %><br>
+        <% row--; %>
+    <% } %>
         </p>
 
         <h2>Exercice 5 : Triangle isocele</h2>
         <p>Ecrire le code afin de produire un triangle rectangle aligné sur la droite</p>
         <p>
             <%
-for (int i = 1; i <= cpt; i++) {
-    for (int j = 1; j <= cpt - i; j++) {
-        out.print("&nbsp;");
-    }
-    for (int k = 1; k <= 2 * i - 1; k++) {
-        out.print("*");
-    }
-    out.println("<br>");
-}
-%>
+            for (int i = 1; i <= cpt; i++) {
+                for (int j = 1; j <= cpt - i; j++) {
+                    out.print("&nbsp;");
+                }
+                for (int k = 1; k <= i; k++) {
+                    out.print("*");
+                }
+                out.println("<br>");
+            }
+            %>
         </p>
 
         <h2>Exercice 6 : Le demi losange</h2>
         <p>Ecrire le code afin de produire un losange</p>
         <p>
-           <%
-for (int i = 1; i <= cpt; i++) {
-    for (int j = 1; j <= cpt - i; j++) {
-        out.print("&nbsp;");
-    }
-    for (int k = 1; k <= 2 * i - 1; k++) {
-        out.print("*");
-    }
-    out.println("<br>");
-}
-%>
+            <%
+            for (int i = 1; i <= cpt; i++) {
+                for (int j = 1; j <= cpt - i; j++) {
+                    out.print("&nbsp;");
+                }
+                for (int k = 1; k <= i; k++) {
+                    out.print("*");
+                }
+                out.println("<br>");
+            }
 
-<%
-for (int i = cpt - 1; i >= 1; i--) {
-    for (int j = 1; j <= cpt - i; j++) {
-        out.print("&nbsp;");
-    }
-    for (int k = 1; k <= 2 * i - 1; k++) {
-        out.print("*");
-    }
-    out.println("<br>");
-}
-%>
+            for (int i = cpt - 1; i >= 1; i--) {
+                for (int j = 1; j <= cpt - i; j++) {
+                    out.print("&nbsp;");
+                }
+                for (int k = 1; k <= i; k++) {
+                    out.print("*");
+                }
+                out.println("<br>");
+            }
+            %>
         </p>
 
         <h2>Exercice 7 : La table de multiplication</h2>
